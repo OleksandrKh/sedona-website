@@ -1,0 +1,927 @@
+@font-face {
+    font-family: "PTsans";
+    src: url(../fonts/ptsans.woff2);
+    src: url(../fonts/ptsans.woff);
+}
+
+@font-face {
+    font-family: 'PTsansBold';
+    src: url(../fonts/ptsansbold.woff2);
+    src: url(../fonts/ptsansbold.woff);
+}
+
+
+/* Global styles */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    text-transform: uppercase;
+}
+
+
+/* global fonts for web-page */
+
+body {
+    background-color: #f2f2f2;
+    font: 400 14px "PTsans", sans-serif;
+}
+
+
+/* styles for headers */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "PTsansBold", sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+/* wrapper of the site */
+
+.wrapper {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+header,
+footer {
+    padding: 0px 6%;
+}
+
+section {
+    padding: 56px 0;
+}
+
+
+/* clearfix */
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: table;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100%;
+}
+
+
+/* lines around numbers */
+
+.linesForNumbers {
+    display: inline-block;
+    position: relative;
+}
+
+.linesForNumbers:before,
+.linesForNumbers:after {
+    content: '';
+    background-color: #fff;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+}
+
+.linesForNumbers:before {
+    left: -15px;
+}
+
+.linesForNumbers:after {
+    right: -15px;
+}
+
+
+/* Global button styles */
+
+.button {
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    display: inline-block;
+    font: 700 1.500em "PTsansBold", sans-serif;
+    outline: none;
+    transition: all .25s ease;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.button:active {
+    color: rgba(255, 255, 255, .5);
+}
+
+
+/* blue button */
+
+.button-blue {
+    background-color: #81b3d2;
+}
+
+.button-blue:hover {
+    background-color: #669ec0;
+}
+
+.button-blue:active {
+    background-color: #5496bd;
+}
+
+
+/* brown button */
+
+.button-brown {
+    background-color: #766357;
+}
+
+.button-brown:hover {
+    background-color: #604e43;
+}
+
+.button-brown:active {
+    background-color: #503e33;
+}
+
+
+/* large button */
+
+.button-large {
+    max-width: 560px;
+    padding: 30px 0;
+    width: 100%;
+}
+
+
+/* button social */
+
+.button-social {
+    height: 46px;
+    width: 46px;
+}
+
+
+/* increase & decrease */
+
+.button-searchForm {
+    background-color: #f2f2f2;
+    color: rgba(0, 0, 0, .5);
+    font: 700 1.500em "PTsansBold", sans-serif;
+    height: 38px;
+    width: 38px;
+}
+
+
+/* increase & decrease */
+
+.button-searchForm:hover {
+    color: #000;
+}
+
+.button-searchForm:active {
+    color: #81b3d2;
+}
+
+
+/* Button for search form */
+
+.button-largeBlue {
+    margin-top: 30px;
+    padding: 15px 0;
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 0;
+    left: 50%;
+    margin-left: -67px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
+
+.logo img {
+    height: auto;
+    max-width: 138px;
+    width: 100%;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: #fff;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.mnu li {
+    padding: 20px 0;
+    text-align: center;
+    width: 20%;
+}
+
+.mnu a {
+    color: #000;
+    font: 700 14px "PTsansBold", sans-serif;
+    text-decoration: none;
+}
+
+.mnu a:hover {
+    color: #81b3d2;
+}
+
+.mnu a:active {
+    color: rgba(0, 0, 0, .5);
+}
+
+.mnu-left {
+    float: left;
+}
+
+.mnu-right {
+    float: right;
+}
+
+
+/* Header content - inner page */
+
+.header.headerHotels {
+    background: transparent url(../img/filter-bg.png) no-repeat;
+    background-position: top left;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-bottom: 32px;
+}
+
+.search {
+    color: #fff;
+    padding-top: 55px;
+    width: 100%;
+}
+
+.hh-content {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    font: 400 14px "PTsans", sans-serif;
+}
+
+.hh-content_item {
+    width: 49%;
+}
+
+.hh-houses-item {
+    display: inline-block;
+    padding-top: 30px;
+    text-align: left;
+    width: 49%;
+}
+
+.hh-houses-item p {
+    font: 700 16px "PTsansBold", sans-serif;
+}
+
+.hh-houses-item li {
+    margin-top: 26px;
+}
+
+.hh-houses-item label {
+    cursor: pointer;
+    padding-left: 40px;
+}
+
+.hh-houses-item input[type=checkbox] {
+    display: none;
+}
+
+.hh-houses-item label {
+    position: relative;
+}
+
+.hh-houses-item input[type=checkbox]:not(checked) + label:before {
+    background: transparent url(../img/elements/checkbox.png) no-repeat center left;
+    content: '';
+    height: 24px;
+    left: 0;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    width: 26px;
+}
+
+.hh-houses-item input[type=checkbox]:checked + label:before {
+    background: transparent url(../img/elements/checkbox-checked.png) no-repeat center left;
+}
+
+.hh-houses-item input[type=checkbox]:disabled + label,
+.hh-houses-item input[type=checkbox]:disabled + label:before {
+    background: transparent url(../img/elements/checkbox.png) no-repeat center left;
+    opacity: .5;
+}
+
+.hh-houses-item input[type=checkbox]:checked:disabled + label:before {
+    background: transparent url(../img/elements/checkbox-checked.png) no-repeat center left;
+    opacity: .5;
+}
+
+.prices_range-show {
+    border: 2px solid #fff;
+    border-radius: 2px;
+    display: inline-block;
+    max-width: 356px;
+    padding: 4px;
+    width: 100%;
+}
+
+.prices {
+    padding-top: 30px;
+}
+
+.prices p {
+    margin-bottom: 12px;
+}
+
+.prices input[type=text] {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-align: center;
+    width: 49%;
+}
+
+.prices input[type=text]:first-child {
+    border-right: 2px solid #fff;
+    color: #fff;
+}
+
+.filter-range {
+    width: 315px;
+    margin-top: 30px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.filter-range-title {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 9px;
+    text-align: left;
+}
+
+.price-controls {
+    position: relative;
+    height: 36px;
+    margin-bottom: 20px;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 2;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 49%;
+    padding-left: 10px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+    margin-left: 10px;
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+    width: 20px;
+    height: 20px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle:hover {
+    background: #1c4f80;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.btn-transparent {
+    background: transparent;
+    border-radius: 2px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 12px auto 0;
+    max-width: 135px;
+    padding: 6px 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.btn-transparent:hover {
+    color: #000000;
+    background: #ffffff;
+}
+
+
+/* Main */
+
+.sidePadding {
+    padding: 0 6%;
+}
+
+.sortHouses {
+    border-bottom: 1px solid #e5e5e5;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sortHouses_item {
+    min-width: 134px;
+    width: 15%;
+}
+
+.sortHouses_item:nth-child(1) p {
+    font: 700 1.500em "PTsansBold", sans-serif;
+}
+
+.sortHouses_item:nth-child(2) {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: flex-start;
+    -ms-align-items: center;
+    align-items: center;
+    max-width: 70%;
+    padding-left: 8px;
+    width: 100%;
+}
+
+.sortHouses_item:nth-child(2) p,
+.sortHouses_item:nth-child(2) ul {
+    font: 400 12px "PTsans", sans-serif;
+}
+
+.sortHouses_item:nth-child(2) p {
+    margin-right: 35px;
+}
+
+.sortHouses_item:nth-child(2) li {
+    margin-right: 30px;
+}
+
+.sortHouses_item li {
+    display: inline-block;
+}
+
+.sortHouses_item li a {
+    border-bottom: 1px dashed #81b3d2;
+    color: rgba(0, 0, 0, .5);
+    text-decoration: none;
+}
+
+.sortHouses_item li a.active,
+.sortHouses_item li a:hover {
+    color: #81b3d2;
+}
+
+.sortHouses_item li a.active {
+    border-bottom-color: transparent;
+}
+
+.sortHouses_item li a:active {
+    color: #000;
+}
+
+.sortHouses_item:nth-child(3) {
+    text-align: right;
+}
+
+.sortHouses_pageNav {
+    color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    display: inline-block;
+}
+
+.sortHouses_pageNav:hover {
+    color: #000;
+    display: inline-block;
+}
+
+.sortHouses_pageNav:active {
+    color: #81b3d2;
+    display: inline-block;
+}
+
+.hotel,
+.result_info_item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.hotel {
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 29px;
+    padding-bottom: 30px;
+}
+
+.hotel button {
+    font: 700 14px "PTsans", sans-serif;
+    padding: 5px 15px;
+}
+
+.result_info_item:nth-child(2) {
+    justify-content: flex-start;
+    margin: 18px 0;
+}
+
+.result_info_item {
+    line-height: .8;
+}
+
+.result_info_item a.button {
+    font: 400 14px "PTsans", sans-serif;
+    line-height: .8;
+    padding: 7px 16px;
+}
+.result_info_item a.button:nth-child(2) {
+    margin-left: 3px;
+}
+
+.result_img {
+    font-size: 0;
+    min-width: 134px;
+    width: 15%;
+}
+
+.result_img img {
+    height: auto;
+    max-width: 136px;
+    width: 100%;
+}
+
+.result_info {
+    max-width: 84%;
+    width: 100%;
+}
+
+.hotel-name {
+    color: #000;
+    font: 700 1.500em "PTsansBold", sans-serif;
+    line-height: .8;
+    text-decoration: none;
+    text-align: left;
+}
+
+.hotel-name:hover {
+    color: #81b3d2;
+}
+
+.hotel-name:active {
+    color: rgba(0, 0, 0, .5);
+}
+
+
+/* Footer */
+.footer {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-around;
+    -ms-align-items: center;
+    align-items: center;
+    
+    background-color: rgba(255,255,255,.5);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 34px 6%;
+    position: static;
+    width: 100%;
+}
+.footer.footer-inner {
+    position: static;
+}
+.footer_item {
+    height: 46px;
+    text-align: center;
+    width: 25%;
+}
+.footer_item:nth-child(2) {
+    width: 50%;
+}
+.footer_item:last-child {
+    margin-right: 15px;
+}
+
+.footer_hashTag a {
+    color: #000;
+    font: 700 1.500em "PTsansBold", sans-serif;
+    text-decoration: none;
+}
+.footer_hashTag a:hover {
+    color: #766357;
+}
+.footer_hashTag a:active {
+    color: rgba(0,0,0,.5);
+}
+
+.footer_hashTag,
+.footer_social {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.footer_social {
+    padding-top: 2px;
+    padding-left: 30px;
+}
+.footer_social li {
+    font-size: 0;
+    display: inline-block;
+    margin-right: 8px;
+}
+.footer_website {
+    padding-top: 4px;
+    padding-left: 35px;
+}
+
+.footer_social-buttons {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.footer_social-buttons:active img {
+    opacity: 0.5;
+}
+
+.htmlacademy {
+    background: transparent url(../img/developer.png) no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: inline-block;
+    height: 40px;
+    margin: 3px auto;
+    max-width: 196px;
+    width: 100%;
+}
+.htmlacademy:hover {
+    background-position: 0 -56px;
+}
+.htmlacademy:active {
+    background-position: 0 -112px;
+}
+
+@media all and (max-width: 768px) {
+    /* Header */
+    .header {
+        padding: 0;
+    }
+    nav {
+        position: relative;
+    }
+    .logo {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .header_content_shadow {
+        display: block;
+    }
+    .mnu li {
+        border-bottom: 1px solid #000;
+        display: block;
+        float: none;
+        padding: 10px 0;
+        width: 100%;
+    }
+    .mnu li:first-child {
+        border-top: 1px solid #000;
+        margin-top: 15px;
+    }
+    .mnu li a {
+        display: inline-block;
+        text-align: center;
+    }
+    /*inner page*/
+    .hh-content {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
+    }
+    .search {
+        padding-top: 0;
+    }
+    .prices input[type=text] {
+        width: 100%;
+    }
+    .prices input[type=text]:first-child {
+        border: none;
+    }
+    .hotel,
+    .result_info_item,
+    .sortHouses,
+    .sortHouses_item:nth-child(2) {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+        -ms-align-items: center;
+        align-items: center;
+    }
+    .sortHouses_item:nth-child(2) p,
+    .sortHouses_item:nth-child(2) li {
+        display: block;
+        margin: 0 0 10px 0;
+    }
+    .sortHouses_item:nth-child(3),
+    .sortHouses_item:nth-child(2) ul {
+        text-align: center;
+    }
+    .sortHouses_item {
+        margin: 5px 0;
+    }
+    .hotel,
+    .result_info_item,
+    .result_info_item a {
+        line-height: 1;
+    }
+    .r-info_btnWrap button {
+        display: block;
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto;
+    }
+    .r-info_btnWrap button:first-child {
+        margin-bottom: 10px;
+    }
+    .result_info_item a {
+        margin: 10px;
+    }
+    .r-info_rating {
+        margin-top: 10px;
+    }
+    /* Fotter */
+    .footer {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+    }
+    .footer_item {
+        width: 100%;
+    }
+    .footer_item:nth-child(2) {
+        margin-bottom: 15px;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .hh-houses-item {
+        padding-left: 0;
+        width: 100%;
+    }
+}
